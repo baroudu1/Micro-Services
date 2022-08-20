@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Config_Server/Config_Server.iml" filepath="$PROJECT_DIR$/Config_Server/Config_Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Micro-Services.iml" filepath="$PROJECT_DIR$/.idea/Micro-Services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/limits_service/limits_service.iml" filepath="$PROJECT_DIR$/limits_service/limits_service.iml" />
+    </modules>
+  </component>
+</project>
