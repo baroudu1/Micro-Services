@@ -7,18 +7,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka_naming_service" />
+        <module name="currency_exchange_service" />
+        <module name="currency_conversion_service" />
+        <module name="api_gateway" />
         <module name="limits_service" />
-        <module name="Config_Server" />
+        <module name="config_server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Config_Server" target="17" />
+      <module name="api_gateway" target="17" />
+      <module name="config_server" target="17" />
+      <module name="currency_conversion_service" target="17" />
+      <module name="currency_exchange_service" target="17" />
+      <module name="eureka_naming_service" target="17" />
       <module name="limits_service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Config_Server" options="-parameters" />
+      <module name="api_gateway" options="-parameters" />
+      <module name="config_server" options="-parameters" />
+      <module name="currency_conversion_service" options="-parameters" />
+      <module name="currency_exchange_service" options="-parameters" />
+      <module name="eureka_naming_service" options="-parameters" />
       <module name="limits_service" options="-parameters" />
     </option>
   </component>

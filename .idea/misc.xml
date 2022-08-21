@@ -5,6 +5,10 @@
       <list>
         <option value="$PROJECT_DIR$/limits_service/pom.xml" />
         <option value="$PROJECT_DIR$/Config_Server/pom.xml" />
+        <option value="$PROJECT_DIR$/currency_exchange_service/pom.xml" />
+        <option value="$PROJECT_DIR$/currency_conversion_service/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka_naming_service/pom.xml" />
+        <option value="$PROJECT_DIR$/api_gateway/pom.xml" />
       </list>
     </option>
   </component>
