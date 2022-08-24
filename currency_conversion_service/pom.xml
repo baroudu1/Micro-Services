@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-sleuth</artifactId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId> <!-- affecter a chaque request un unique ID  -->
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -44,7 +44,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId> <!-- use other micro/web services  -->
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

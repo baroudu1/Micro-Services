@@ -4,9 +4,7 @@ import com.microservices.currency_conversion_service.helper.CurrencyConversionPr
 import com.microservices.currency_conversion_service.model.CurrencyConversion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class CurrencyConversionService {
@@ -25,13 +23,18 @@ public class CurrencyConversionService {
 //                        CurrencyConversion.class, from, to);
 //        CurrencyConversion currencyConversion = responseEntity.getBody();
 
-        CurrencyConversion currencyConversion = currencyConversionProxy.getCurrencyConversion(from, to);
-
-        assert currencyConversion != null;
-        currencyConversion.setQuantity(quantity);
-        currencyConversion.setTotalCalculatedAmount(quantity * currencyConversion.getConversionMultiple());
-        currencyConversion.setPort(currencyConversion.getPort() +" --> "+port);
+        CurrencyConversion currencyConversion = null;
+        try {
+//            System.err.println(currencyConversionProxy.getCurrencyConversion(from, to).toString());
+            currencyConversion = currencyConversionProxy.getCurrencyConversion(from, to);
+            currencyConversion.setQuantity(quantity);
+            currencyConversion.setTotalCalculatedAmount(quantity * currencyConversion.getConversionMultiple());
+            currencyConversion.setPort(currencyConversion.getPort() +" --> "+port);
+        } catch (Exception e) {
+            throw new RuntimeException("Exchange not found");
+        }
         return currencyConversion;
+
     }
 
 
